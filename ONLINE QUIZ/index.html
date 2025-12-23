@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz - Test Your Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h1>🧑‍💻 Programming Quiz</h1>
+                <p class="subtitle">Test your programming knowledge!</p>
+                <p class="description">
+                    You'll have <strong>1 minute</strong> to answer each question.<br>
+                    The quiz will automatically advance when time runs out.
+                </p>
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="question-number">Question 1</span>
+                    <span id="total-questions">of 10</span>
+                </div>
+                <div class="timer-container">
+                    <div class="timer-circle">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="timer-progress" cx="50" cy="50" r="45" id="timer-circle"></circle>
+                        </svg>
+                        <div class="timer-text">
+                            <span id="timer-seconds">60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Loading question...</h2>
+            </div>
+
+            <div class="options-container" id="options-container">
+                <!-- Options will be dynamically generated -->
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn btn-secondary" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h1>🎉 Quiz Complete!</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <p class="score-text">
+                        You scored <strong id="score-value">0</strong> out of <strong id="total-score">10</strong>
+                    </p>
+                </div>
+
+                <div class="results-summary">
+                    <h3>Summary</h3>
+                    <div id="results-details">
+                        <!-- Results details will be dynamically generated -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn btn-primary">Take Quiz Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
